@@ -1,0 +1,26 @@
+{
+  "name": "mysite",
+  "version": "1.0.0",
+  "description": "my own website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umyar/mysite.git"
+  },
+  "author": "umyar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umyar/mysite/issues"
+  },
+  "homepage": "https://github.com/umyar/mysite#readme",
+  "devDependencies": {
+    "prettier": "^1.18.2",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0"
+  }
+}
