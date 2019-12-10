@@ -9,10 +9,9 @@ html {
 body {
   color: #feca39;
   background-color: #1a1a1a;
-  /* font-family: "Heebo", sans-serif; */
   font-family: "Montserrat", sans-serif;
-  /* font-family: "Open Sans", sans-serif; */
   --center: calc((100vh - 8.8rem - 8rem) / 2);
+  height: 100%;
 }
 .main-layout {
   margin: 0 10rem;
@@ -49,10 +48,8 @@ h1 {
   font-size: 3.3rem;
 }
 main {
-  
-  margin: 40rem auto;
-  /* text-align: center; */
-  font-size: 2rem;
+  margin: 30rem auto;
+  font-size: 1.5rem;
 }
 main h2 {
   font-weight: 700;
@@ -60,19 +57,19 @@ main h2 {
   line-height: 1em;
   margin: 2rem auto;
 }
+main a {
+  text-decoration: none;
+  color: #1a1a1a;
+  background: #feca39;
+}
 footer {
   display: flex;
   text-align: center;
   width: 100%;
   justify-content: center;
+  height: 20%;
 }
-.ligth {
-  cursor: pointer;
-  height: 8.8rem;
-}
-.ligth img {
-  height: 8.8rem;
-}
+
 .contacts a {
   display: block;
   text-decoration: none;
@@ -107,5 +104,15 @@ footer {
   }
   .logo {
     margin: 0 auto;
+  }
+  main h2 {
+    font-size: 5rem;
+  }
+  footer {
+    margin-bottom: 1rem;
+  }
+  .contact img {
+    /* width: 5rem; */
+    /* height: 5rem; */
   }
 }
