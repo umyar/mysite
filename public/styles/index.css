@@ -80,17 +80,17 @@ footer {
   margin-bottom: 1.5rem;
 }
 
-ul.contacts {
+.contacts-ul {
   display: flex;
   width: 100%;
   justify-content: center;
 }
-ul.contacts li {
+.contacts-ul li {
   list-style: none;
   margin: 0 1rem;
 }
 
-ul.contacts li img {
+.contacts-ul li img {
   width: 4rem;
   height: 4rem;
   cursor: pointer;
