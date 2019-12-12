@@ -20,6 +20,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding-top: 3rem;
+  margin-bottom: 8rem;
 }
 .logo {
   display: grid;
@@ -46,21 +47,6 @@ h1 {
   text-align: center;
   font-weight: 700;
   font-size: 3.3rem;
-}
-main {
-  margin: 30rem auto;
-  font-size: 1.5rem;
-}
-main h2 {
-  font-weight: 700;
-  font-size: 8rem;
-  line-height: 1em;
-  margin: 2rem auto;
-}
-main a {
-  text-decoration: none;
-  color: #1a1a1a;
-  background: #feca39;
 }
 footer {
   display: flex;
@@ -94,6 +80,23 @@ footer {
   width: 4rem;
   height: 4rem;
   cursor: pointer;
+}
+.about-description p {
+  margin: 1.5rem auto;
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+.about-description a {
+  font-size: 2.5rem;
+  color: #feca39;
+  display: inline-block;
+  margin: 3rem 0;
+  padding: 1rem;
+}
+.about-description a:hover {
+  background: #feca39;
+  color: #1a1a1a;
+  text-decoration: none;
 }
 @media screen and (max-width: 400px) {
   .main-layout {
