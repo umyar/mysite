@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel ./public/index.html watch",
     "build": "parcel build <your entry file>",
-    "brs" : "browser-sync start --server \"./public\" --files \"./public\""
+    "brs": "browser-sync start --server \"./public\" --files \"./public\""
   },
   "repository": {
     "type": "git",
