@@ -10,7 +10,6 @@ body {
   color: #feca39;
   background-color: #1a1a1a;
   font-family: 'Montserrat', sans-serif;
-  /*--center: calc((100vh - 8.8rem - 8rem) / 2);*/
   height: 100%;
 }
 ul {
@@ -52,6 +51,9 @@ h1 {
   font-weight: 700;
   font-size: 3.3rem;
   letter-spacing: -2px;
+}
+.main-nav {
+  display: flex;
 }
 main {
   display: flex;
