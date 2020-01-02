@@ -23,19 +23,26 @@
           <h1>topux.dev</h1>
           <strong class="digital">Digital Agency</strong>
         </a>
-        <nav class="main-nav">
-          <ul>
-            <li class="main-nav-item">
-              <a href="./about.html">О нас</a>
-            </li>
-            <li class="main-nav-item">
-              <a href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="main-nav-item">
-              <a href="./contacts.html">Контакты</a>
-            </li>
-          </ul>
-        </nav>
+        <div class="nav-wrap">
+          <div class="menu-toggle-button" onclick="myFunction(this)" role="button" aria-pressed="false">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+          <nav class="main-nav">
+            <ul>
+              <li class="main-nav-item">
+                <a href="./about.html">О нас</a>
+              </li>
+              <li class="main-nav-item">
+                <a href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="main-nav-item">
+                <a href="./contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </header>
       <main>
         <article class="main-article">
@@ -54,7 +61,7 @@
                 >
               </li>
               <li>
-                <img class="mini" src="./img/icons/cube1.png" alt="" />
+                <img src="./img/icons/cube1.png" alt="" />
                 <span class="advantage">Умеем в <strong>3d-моделирование</strong></span>
               </li>
               <li>
@@ -91,5 +98,22 @@
         </div>
       </footer>
     </div>
+    <script>
+      function myFunction(x) {
+        const menu = document.querySelector('.main-nav');
+        const main = document.querySelector('main');
+        const footer = document.querySelector('footer');
+        const logo = document.querySelector('.logo');
+
+        main.classList.toggle("blured");
+        footer.classList.toggle("blured");
+        logo.classList.toggle("blured");
+
+        menu.classList.toggle("opened-menu");
+        x.classList.toggle("change");
+
+
+      }
+    </script>
   </body>
 </html>
