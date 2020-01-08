@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel ./public/* watch",
-    "build": "parcel build <your entry file>",
+    "build": "parcel build ./public/index.html",
     "brs": "browser-sync start --server \"./public\" --files \"./public\""
   },
   "repository": {
@@ -19,12 +19,12 @@
     "url": "https://github.com/umyar/mysite/issues"
   },
   "homepage": "https://github.com/umyar/mysite#readme",
+  "browserslist": [
+    "defaults"
+  ],
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "parcel-bundler": "^1.12.4",
-    "prettier": "^1.18.2",
-    "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.8",
-    "webpack-dev-server": "^3.8.0"
+    "prettier": "^1.18.2"
   }
 }

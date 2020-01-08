@@ -2,12 +2,9 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1 shrink-to-fit=no"
-    />
-    <title>Contacts | topux.dev</title>
-    <link rel="shortcut icon" href="./img/pictogram.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Контакты | topux.dev</title>
+    <link rel="shortcut icon" href="./img/pictogram.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./styles/contacts.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap"
@@ -18,25 +15,40 @@
     <div class="main-layout">
       <header>
         <a href="./index.html" class="logo">
-          <div class="logo-lamp"><img src="./img/lampbold.png" alt="topuxdev logo"/></div>
+          <div class="logo-lamp"><img src="./img/lampbold.png" alt="topux.dev logo" /></div>
           <h1>topux.dev</h1>
           <strong class="digital">Digital Agency</strong>
         </a>
-        <nav class="main-nav">
-          <ul>
-            <li class="main-nav-item">
-              <a href="./about.html">О нас</a>
-            </li>
-            <li class="main-nav-item">
-              <a href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="main-nav-item">
-              <a href="./index.html">Главная</a>
-            </li>
-          </ul>
-        </nav>
+        <div class="nav-wrap">
+          <div
+            class="menu-toggle-button"
+            onclick="myFunction(this)"
+            role="button"
+            aria-pressed="false"
+          >
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+          <nav class="main-nav">
+            <ul>
+              <li class="main-nav-item">
+                <a href="./index.html">Главная</a>
+              </li>
+              <li class="main-nav-item">
+                <a href="./about.html">О нас</a>
+              </li>
+              <li class="main-nav-item">
+                <a href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="main-nav-item">
+                <a href="./contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </header>
-      <main class="about-description">
+      <main>
         <article class="main-article">
           <h2>ШИШ</h2>
         </article>
@@ -45,13 +57,42 @@
         <div class="contacts">
           <a href="tel:+79272865060">+7(927)286-50-60</a>
           <ul class="contacts-ul">
-            <li><a href="viber://chat?number=+79272865060"><img src="./img/viber.png" alt="Вайбер" />Viber</a></li>
-            <li><a href="whatsapp://send?phone=+79272865060"><img src="./img/whatsapp.png" alt="Ватсап" />WhatsApp</a></li>
-            <li><a href="tg://resolve?domain=umyar"><img src="./img/телеграм.png" alt="Телеграм" />Telegram</a></li>
-            <li><a href="tel:+79272865060"><img src="./img/phone.png" alt="Телефон" />Phone</a></li>
+            <li>
+              <a href="viber://chat?number=+79272865060"
+                ><img src="./img/viber.png" alt="Viber icon" />Viber</a
+              >
+            </li>
+            <li>
+              <a href="whatsapp://send?phone=+79272865060"
+                ><img src="./img/whatsapp.png" alt="WhatsApp icon" />WhatsApp</a
+              >
+            </li>
+            <li>
+              <a href="tg://resolve?domain=umyar"
+                ><img src="./img/телеграм.png" alt="Telegram icon" />Telegram</a
+              >
+            </li>
+            <li>
+              <a href="tel:+79272865060"><img src="./img/phone.png" alt="Phone icon" />Phone</a>
+            </li>
           </ul>
         </div>
       </footer>
     </div>
+    <script>
+      const menu = document.querySelector('.main-nav');
+      const main = document.querySelector('main');
+      const footer = document.querySelector('footer');
+      const logo = document.querySelector('.logo');
+
+      function myFunction(x) {
+        main.classList.toggle('blured');
+        footer.classList.toggle('blured');
+        logo.classList.toggle('blured');
+
+        menu.classList.toggle('opened-menu');
+        x.classList.toggle('change');
+      }
+    </script>
   </body>
 </html>

@@ -11,27 +11,34 @@
     <link rel="shortcut icon" href="./img/pictogram.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./styles/index.css" />
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap"
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="manifest" href="./manifest.json">
   </head>
   <body>
     <div class="main-layout">
       <header>
         <a href="./index.html" class="logo">
-          <div class="logo-lamp"><img src="./img/lampbold.png" alt="topuxdev logo" /></div>
+          <div class="logo-lamp"><img src="./img/lampbold.png" alt="topux.dev logo" /></div>
           <h1>topux.dev</h1>
           <strong class="digital">Digital Agency</strong>
         </a>
         <div class="nav-wrap">
-          <div class="menu-toggle-button" onclick="myFunction(this)" role="button" aria-pressed="false">
+          <div
+            class="menu-toggle-button"
+            onclick="myFunction(this)"
+            role="button"
+            aria-pressed="false"
+          >
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
           </div>
           <nav class="main-nav">
             <ul>
+              <li class="main-nav-item">
+                <a href="./index.html">Главная</a>
+              </li>
               <li class="main-nav-item">
                 <a href="./about.html">О нас</a>
               </li>
@@ -79,41 +86,39 @@
           <ul class="contacts-ul">
             <li>
               <a href="viber://chat?number=+79272865060"
-                ><img src="./img/viber.png" alt="Вайбер" />Viber</a
+                ><img src="./img/viber.png" alt="Viber icon" />Viber</a
               >
             </li>
             <li>
               <a href="whatsapp://send?phone=+79272865060"
-                ><img src="./img/whatsapp.png" alt="Ватсап" />WhatsApp</a
+                ><img src="./img/whatsapp.png" alt="WhatsApp icon" />WhatsApp</a
               >
             </li>
             <li>
               <a href="tg://resolve?domain=umyar"
-                ><img src="./img/телеграм.png" alt="Телеграм" />Telegram</a
+                ><img src="./img/телеграм.png" alt="Telegram icon" />Telegram</a
               >
             </li>
             <li>
-              <a href="tel:+79272865060"><img src="./img/phone.png" alt="Телефон" />Phone</a>
+              <a href="tel:+79272865060"><img src="./img/phone.png" alt="Phone icon" />Phone</a>
             </li>
           </ul>
         </div>
       </footer>
     </div>
     <script>
+      const menu = document.querySelector('.main-nav');
+      const main = document.querySelector('main');
+      const footer = document.querySelector('footer');
+      const logo = document.querySelector('.logo');
+
       function myFunction(x) {
-        const menu = document.querySelector('.main-nav');
-        const main = document.querySelector('main');
-        const footer = document.querySelector('footer');
-        const logo = document.querySelector('.logo');
+        main.classList.toggle('blured');
+        footer.classList.toggle('blured');
+        logo.classList.toggle('blured');
 
-        main.classList.toggle("blured");
-        footer.classList.toggle("blured");
-        logo.classList.toggle("blured");
-
-        menu.classList.toggle("opened-menu");
-        x.classList.toggle("change");
-
-
+        menu.classList.toggle('opened-menu');
+        x.classList.toggle('change');
       }
     </script>
   </body>
