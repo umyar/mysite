@@ -51,6 +51,7 @@ body {
 }
 .main-layout {
   height: 100%;
+  width: 100%;
   max-width: 4096px;
   margin: 0 10rem;
   display: flex;
@@ -156,49 +157,29 @@ main h2 {
   margin: 0.5em 0;
 }
 .main-article {
-  display: flex;
-  margin: 10em 0;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-.additional > span {
+  /*display: flex;*/
+  /*justify-content: flex-start;*/
+  /*flex-direction: column;*/
+  /*flex-wrap: wrap;*/
   font-size: 2rem;
-  width: 100%;
-  margin-left: 3rem;
-  font-weight: 300;
 }
-.additional {
-  padding: 0 6rem;
+
+p {
+  margin: 2em 0;
+  line-height: 1.5em;
+  max-width: 50em;
 }
-.advantages {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+
+.main-article a {
+  color: #feca39;
 }
-.advantages li {
-  display: flex;
-  flex-grow: 1;
-  flex-shrink: 0;
-  justify-content: flex-start;
-  margin: 3rem;
-  min-width: 45rem;
-  max-width: calc(50% - 2rem * 4);
-  flex-direction: row;
-  align-items: center;
+
+.main-article a:hover {
+  background: #feca39;
+  color: #1a1a1a;
+  text-decoration: none;
 }
-.advantages img {
-  width: 7rem;
-  height: 7rem;
-  margin-right: 2rem;
-}
-/*img.mini {*/
-/*  width: 6rem;*/
-/*  height: 6rem;*/
-/*}*/
-.advantage {
-  font-size: 2rem;
-  font-weight: 300;
-}
+
 footer {
   display: flex;
   width: 100%;
@@ -239,22 +220,14 @@ footer {
   letter-spacing: 0;
 }
 
-
 @media screen and (max-width: 1100px) {
   .main-layout {
     margin: 0 5rem;
-  }
-  .main-article {
-    margin: 5em 0;
   }
 }
 @media screen and (max-width: 860px) {
   main h2 {
     font-size: 7rem;
-  }
-
-  .advantages li {
-    margin: 2rem;
   }
 
   /* NAVIGATION MANIPULATIONS START*/
@@ -330,9 +303,6 @@ footer {
   }
   .digital {
     font-size: 1.2rem;
-  }
-  .main-article {
-    margin: 3em 0 5em 0;
   }
   main h2 {
     font-size: 4.8rem;

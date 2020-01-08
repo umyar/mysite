@@ -51,6 +51,7 @@ body {
 }
 .main-layout {
   height: 100%;
+  width: 100%;
   max-width: 4096px;
   margin: 0 10rem;
   display: flex;
@@ -161,44 +162,15 @@ main h2 {
   justify-content: flex-start;
   flex-wrap: wrap;
 }
-.additional > span {
-  font-size: 2rem;
-  width: 100%;
-  margin-left: 3rem;
-  font-weight: 300;
-}
-.additional {
-  padding: 0 6rem;
-}
-.advantages {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.advantages li {
-  display: flex;
-  flex-grow: 1;
-  flex-shrink: 0;
-  justify-content: flex-start;
-  margin: 3rem;
-  min-width: 45rem;
-  max-width: calc(50% - 2rem * 4);
-  flex-direction: row;
-  align-items: center;
-}
-.advantages img {
-  width: 7rem;
-  height: 7rem;
-  margin-right: 2rem;
-}
-/*img.mini {*/
-/*  width: 6rem;*/
-/*  height: 6rem;*/
-/*}*/
-.advantage {
-  font-size: 2rem;
-  font-weight: 300;
-}
+
+
+
+
+
+
+
+
+
 footer {
   display: flex;
   width: 100%;
@@ -247,17 +219,10 @@ footer {
   .main-article {
     margin: 5em 0;
   }
-  .additional {
-    padding: 0 3rem;
-  }
 }
 @media screen and (max-width: 860px) {
   main h2 {
     font-size: 7rem;
-  }
-
-  .advantages li {
-    margin: 2rem;
   }
 
   /* NAVIGATION MANIPULATIONS START*/
@@ -314,15 +279,6 @@ footer {
   main h2 {
     font-size: 6rem;
   }
-  .additional > span {
-    margin-left: 0;
-  }
-  .advantages li {
-    margin: 2rem 0;
-    min-width: auto;
-    max-width: none;
-    flex-shrink: initial;
-  }
   footer,
   header {
     margin: 3rem 0;
@@ -349,23 +305,6 @@ footer {
   main h2 {
     font-size: 4.8rem;
   }
-  .additional {
-    padding: 0 1rem;
-  }
-  .additional > span {
-    font-size: 1.6rem;
-  }
-  .advantages {
-    margin-top: 1.4rem;
-  }
-  .advantage {
-    font-size: 1.6rem;
-  }
-  .advantages img {
-    width: 5.6rem;
-    height: 5.6rem;
-    flex-shrink: 0;
-  }
   .contacts a {
     font-size: 1.2rem;
     margin-bottom: 1.2rem;
@@ -381,9 +320,6 @@ footer {
 @media screen and (max-width: 400px) {
   .main-layout {
     margin: 0 2rem;
-  }
-  .advantages li {
-    margin: 1rem 0;
   }
   header,
   footer {
