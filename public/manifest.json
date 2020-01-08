@@ -1,12 +1,16 @@
 {
-  "version": "0.1.0",
-  "theme": {
-    "colors": {
-      "frame": "black",
-      "tab_background_text": "white",
-      "tab_text": "white",
-      "toolbar": "black",
-      "bookmark_text": "red"
+  "manifest_version": 2,
+  "name":"topux.dev",
+  "version":"0.1",
+  "theme":{
+    "colors":{
+      "frame": "#1a1a1a",
+      "frame_inactive": "#1a1a1a",
+      "tab_background_text": "#feca39",
+      "tab_background_separator": "#feca39",
+      "tab_line": "#feca39",
+      "bookmark_text": "#feca39",
+      "tab_text": "#feca39"
     }
   }
 }
