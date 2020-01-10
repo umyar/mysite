@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel ./public/* watch",
-    "build": "parcel build ./public/index.html",
+    "build": "rm -rf dist & parcel build ./public/index.html --no-source-maps",
     "brs": "browser-sync start --server \"./public\" --files \"./public\""
   },
   "repository": {
@@ -19,10 +19,8 @@
     "url": "https://github.com/umyar/mysite/issues"
   },
   "homepage": "https://github.com/umyar/mysite#readme",
-  "browserslist": [
-    "defaults"
-  ],
   "devDependencies": {
+    "autoprefixer": "^9.7.3",
     "browser-sync": "^2.26.7",
     "parcel-bundler": "^1.12.4",
     "prettier": "^1.18.2"
