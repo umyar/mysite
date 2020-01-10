@@ -41,6 +41,11 @@ html {
   pointer-events: none;
 }
 
+.active {
+  /*border-bottom: 1px solid #feca39;*/
+  text-decoration: underline !important;
+}
+
 ul {
   list-style: none;
 }
@@ -330,6 +335,11 @@ footer {
     padding: 2rem;
     text-align: end;
   }
+
+  /*.active {*/
+  /*  border-right: 1px solid #feca39;*/
+  /*  border-bottom: none;*/
+  /*}*/
   /* NAVIGATION MANIPULATIONS FINISH*/
 }
 

@@ -37,6 +37,10 @@ html {
   transition: 0.2s ease-in-out;
   pointer-events: none;
 }
+.active {
+  /*border-bottom: 1px solid #feca39;*/
+  text-decoration: underline !important;
+}
 ul {
   list-style: none;
 }
@@ -152,24 +156,70 @@ main {
 }
 main h2 {
   font-weight: 700;
-  font-size: 8rem;
+  font-size: 3.5rem;
   line-height: 1em;
-  margin: 0.5em 0;
+  margin: 0 0 0.5em 0;
 }
 .main-article {
-  display: flex;
-  margin: 10em 0;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  font-size: 2rem;
+  margin-bottom: 10rem;
 }
 
+.main-article a {
+  color: #feca39;
+}
 
+.main-article a:hover {
+  background: #feca39;
+  color: #1a1a1a;
+  text-decoration: none;
+}
 
+.main-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+.main-contacts li {
+  max-width: calc(50% - 4rem);
+  padding: 4rem;
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  flex-grow: 1;
+  border: 2px dashed #feca39;
+  border-radius: 5rem;
+}
 
+.contact-logo img {
+  max-width: 7rem;
+}
 
+/*.contact-link {*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  flex-wrap: wrap;*/
+/*}*/
 
+.contact-link p {
+  width: 100%;
+  margin: 1em 0;
+  line-height: 1.5em;
+}
 
+.contact-link a {
+  display: inline-block;
+  margin: 1rem 1rem;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border: 3px solid #feca39;
+  border-radius: 5rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
 
 footer {
   display: flex;
@@ -211,20 +261,12 @@ footer {
   letter-spacing: 0;
 }
 
-
 @media screen and (max-width: 1100px) {
   .main-layout {
     margin: 0 5rem;
   }
-  .main-article {
-    margin: 5em 0;
-  }
 }
 @media screen and (max-width: 860px) {
-  main h2 {
-    font-size: 7rem;
-  }
-
   /* NAVIGATION MANIPULATIONS START*/
   header {
     position: relative;
@@ -269,15 +311,20 @@ footer {
     padding: 2rem;
     text-align: end;
   }
+  /*.active {*/
+  /*  border-right: 1px solid #feca39;*/
+  /*  border-bottom: none;*/
+  /*}*/
   /* NAVIGATION MANIPULATIONS FINISH*/
+
+  .main-contacts li {
+    max-width: none;
+  }
 }
 
 @media screen and (max-width: 660px) {
   .main-layout {
     margin: 0 3rem;
-  }
-  main h2 {
-    font-size: 6rem;
   }
   footer,
   header {
@@ -299,11 +346,27 @@ footer {
   .digital {
     font-size: 1.2rem;
   }
-  .main-article {
-    margin: 3em 0 5em 0;
-  }
   main h2 {
-    font-size: 4.8rem;
+    font-size: 2.5rem;
+  }
+  .main-article {
+    margin-bottom: 5rem;
+  }
+  .main-contacts li {
+    padding: 2rem;
+    margin: 1rem 0;
+  }
+  .contact-logo img {
+    max-width: 6rem;
+  }
+  .contact-link p {
+    font-size: 1.5rem;
+    margin: 1em 0;
+  }
+  .contact-link a {
+    margin: 1rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.5rem;
   }
   .contacts a {
     font-size: 1.2rem;

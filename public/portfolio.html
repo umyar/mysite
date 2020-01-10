@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Портфолио | topux.dev</title>
+    <meta name="theme-color" content="#1a1a1a" />
     <link rel="shortcut icon" href="./img/pictogram.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./styles/portfolio.css" />
     <link
@@ -39,7 +40,7 @@
                 <a href="./about.html">О нас</a>
               </li>
               <li class="main-nav-item">
-                <a href="./portfolio.html">Портфолио</a>
+                <a href="./portfolio.html" class="active">Портфолио</a>
               </li>
               <li class="main-nav-item">
                 <a href="./contacts.html">Контакты</a>
@@ -50,7 +51,45 @@
       </header>
       <main>
         <article class="main-article">
-          <h2>Портфолио, которого нет</h2>
+          <h2>Наши проекты</h2>
+          <ul class="projects">
+            <li class="proj">
+              <div class="proj-logo">
+                <img src="./img/skb.jpg" alt="лого СКБ Победит" />
+              </div>
+              <div class="proj-info">
+                <h3>
+                  Разрабатываем сайт Специального Конструкторского Бюро "Победит".
+                </h3>
+                <ul class="proj-tasklist">
+                  <li>верстаем весь сайт с нуля;</li>
+                  <li>разрабатываем каталог товаров и поиск по нему;</li>
+                  <li>
+                    помогаем выявить преимущества СКБ, которые будут составлять семантическое ядро
+                    сайта;
+                  </li>
+                  <li>разрабатываем форму обратной связи.</li>
+                </ul>
+              </div>
+            </li>
+            <li class="proj">
+              <div class="proj-logo">
+                <img src="./img/7s7.png" alt="лого 7s7.ru" />
+              </div>
+              <div class="proj-info">
+                <h3>
+                  Оптимизация сайта оптовых поставок продуктов питания "Крошка-Поварешка".
+                </h3>
+                <ul class="proj-tasklist">
+                  <li>выявляем причины медленной загрузки страниц;</li>
+                  <li>точечно оптимизируем верстку элементов сайта;</li>
+                  <li>анализируем отчеты Google Search Console и Яндекс Метрики;</li>
+                  <li>тесно взаимеодействуем с командой SEO;</li>
+                  <li>оптимизируем клиентские скрипты.</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
         </article>
       </main>
       <footer>
@@ -69,7 +108,7 @@
             </li>
             <li>
               <a href="tg://resolve?domain=umyar"
-                ><img src="./img/телеграм.png" alt="Telegram icon" />Telegram</a
+                ><img src="img/telegram.png" alt="Telegram icon" />Telegram</a
               >
             </li>
             <li>
