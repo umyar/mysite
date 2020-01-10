@@ -27,7 +27,6 @@
         <div class="nav-wrap">
           <div
             class="menu-toggle-button"
-            onclick="myFunction(this)"
             role="button"
             aria-pressed="false"
           >
@@ -109,17 +108,20 @@
     </div>
     <script>
       const menu = document.querySelector('.main-nav');
+      const menuButton = document.querySelector('.menu-toggle-button');
       const main = document.querySelector('main');
       const footer = document.querySelector('footer');
       const logo = document.querySelector('.logo');
 
-      function myFunction(x) {
+      menuButton.addEventListener('click', toggle);
+
+      function toggle() {
         main.classList.toggle('blured');
         footer.classList.toggle('blured');
         logo.classList.toggle('blured');
 
         menu.classList.toggle('opened-menu');
-        x.classList.toggle('change');
+        menuButton.classList.toggle('change');
       }
     </script>
   </body>
