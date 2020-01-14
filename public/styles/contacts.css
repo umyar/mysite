@@ -1,6 +1,5 @@
 html {
   font-size: 125%;
-  height: 100%;
 }
 @media screen and (max-width: 3840px) {
   html {
@@ -45,7 +44,6 @@ ul {
   list-style: none;
 }
 body {
-  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -54,7 +52,6 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 .main-layout {
-  height: 100%;
   width: 100%;
   max-width: 4096px;
   margin: 0 10rem;
@@ -67,37 +64,52 @@ header {
   margin: 4rem 0;
 }
 .logo {
-  display: grid;
-  grid-column-gap: 1rem;
-  grid-template-columns: 5.7rem auto;
-  grid-template-rows: 4.4rem 5rem;
-  cursor: pointer;
-  user-select: none;
-  text-decoration: none;
-  color: #feca39;
+  display: none;
 }
 
-.logo-lamp {
-  display: block;
-}
-.logo-lamp img {
+.logo-ie img {
   width: 100%;
+  max-width: 22rem;
 }
-.digital {
-  grid-column-start: 2;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
+
+/* logo for good browsers START */
+@supports (display: grid) {
+  .logo-ie {
+    display: none;
+  }
+  .logo {
+    display: grid;
+    grid-column-gap: 1rem;
+    grid-template-columns: 5.7rem auto;
+    grid-template-rows: 4.4rem 5rem;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    color: #feca39;
+  }
+  .logo-lamp {
+    display: block;
+  }
+  .logo-lamp img {
+    width: 100%;
+  }
+  .digital {
+    grid-column-start: 2;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  h1 {
+    grid-column-start: 2;
+    text-align: center;
+    font-weight: 700;
+    font-size: 3.3rem;
+    letter-spacing: -2px;
+  }
 }
-h1 {
-  grid-column-start: 2;
-  text-align: center;
-  font-weight: 700;
-  font-size: 3.3rem;
-  letter-spacing: -2px;
-}
+/* logo for good browsers FINISH */
 .main-nav {
   display: block;
 }
@@ -148,11 +160,10 @@ h1 {
 /* BURGER NAV BUTTON END*/
 
 main {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  justify-content: flex-start;
   font-size: 1.5rem;
+}
+main.blured {
+  display: flex;
 }
 main h2 {
   font-weight: 700;
@@ -177,12 +188,11 @@ main h2 {
 
 .main-contacts {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
 }
 
 .main-contacts li {
-  max-width: calc(50% - 4rem);
   padding: 4rem;
   margin: 2rem;
   display: flex;
@@ -193,6 +203,19 @@ main h2 {
   border: 2px dashed #feca39;
   border-radius: 5rem;
 }
+
+/* main-contacts for good browsers START */
+@supports (display: grid) {
+  .main-contacts {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .main-contacts li {
+    max-width: calc(50% - 4rem);
+  }
+}
+/* main-contacts for good browsers FINISH */
 
 .contact-logo img {
   max-width: 7rem;
@@ -339,6 +362,9 @@ footer {
     grid-column-gap: 0.8rem;
     grid-template-columns: 4.5rem auto;
     grid-template-rows: 3.5rem 4rem;
+  }
+  .logo-ie img {
+    max-width: 17.6rem;
   }
   h1 {
     font-size: 2.6rem;
