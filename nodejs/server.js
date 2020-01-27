@@ -7,7 +7,7 @@ app.use(parser.json());
 app.use(parser.urlencoded({ extended: false }));
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Origin', 'https://topux.dev');
   res.header(
     'Access-Control-Allow-Headers',
     'Origin, X-Requested-With, Content-Type, Accept, Authorization'
@@ -19,20 +19,27 @@ app.use((req, res, next) => {
   next();
 });
 
-app.post('/user-credentials', function(req, res){
-  console.log(req);
-  let request = req.body;
+app.post('/user-request', function(req, res) {
+  // console.log(req);
+  // let request = req.body;
 
-  if (request.email === '1@gmail.com' && request.phone === '1') {
-    res.json({email: request.email, phone: request.phone})
+  const { name, email, phone, comment } = req.body;
+
+  if (name && (email || phone)) {
+    console.log('name: ', name, 'email: ', email, 'phone: ', phone, 'comment: ', comment);
+    res.json({ status: 'ok', message: `Заявка отправлена успешно! Спасибо, ${name}!` });
   } else {
-    res.json({status: 'fail'})
+    res.json({
+      status: 'fail',
+      message:
+        'Извините, но что-то пошло не так. Пожалуйста, напишите об этом нам на topux.dev@gmail.com',
+    });
   }
 });
 
-app.get('/test', function(req, res){
+app.get('/test', function(req, res) {
   res.type('text/plain');
-  res.send('Test string from 9000 port');
+  res.send('Я люблю тебя ❤️');
 });
 
 app.listen(9000, () => console.log('Hello from backend!'));
