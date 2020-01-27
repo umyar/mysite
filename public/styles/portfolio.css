@@ -197,12 +197,10 @@ main h2 {
   border-radius: 3px;
 }
 .proj-link-wrap{
-  margin-top: 1rem;
   text-align: center;
   max-width: 30rem;
 }
 .proj-link {
-  text-decoration: none;
   padding: 0 1rem;
 }
 
