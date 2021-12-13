@@ -1,0 +1,7 @@
+.dark-theme {
+    color: #1e1e1e;
+    background-color: #fff;
+}
+.dark-theme .contacts a {
+	color: #1e1e1e;
+}
