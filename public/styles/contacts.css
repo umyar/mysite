@@ -415,3 +415,6 @@ footer {
     margin: 2rem 0;
   }
 }
+.theme-button {
+	cursor: pointer;
+}
